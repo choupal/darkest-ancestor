@@ -1,0 +1,178 @@
+/* VARIABLES */
+:root {
+  --blue: #00fff6;
+  --light-red: #c92200;
+  --yellow: #c8b46e;
+  --grey: #999999;
+  --black: #000000;
+}
+
+@font-face {
+  font-family: DwarvenAxe;
+  src: url("../assets/fonts/dwarvenaxebb.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato-Bold.ttf");
+  font-weight: bold;
+}
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--black);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* HEADER - MENU */
+header {
+  margin: 0 auto;
+  width: 75%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: DwarvenAxe, cursive;
+  color: var(--black);
+  font-size: 5em;
+  line-height: 1em;
+  text-align: center;
+  margin: 2rem;
+  padding: 8px 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+          to left,
+          rgba(17, 17, 17, 1) 1%,
+          rgba(150, 150, 150, 0.7) 50%,
+          rgba(17, 17, 17, 1) 100%
+  ) 80% 0 80% 0/3px 0 3px 0 stretch;
+  text-shadow: 0 0 10px var(--light-red);
+  cursor: default;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  color: var(--yellow);
+  font-size: 2em;
+  font-family: DwarvenAxe, cursive;
+  background: none;
+  padding: 8px 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+          to left,
+          rgba(17, 17, 17, 1) 1%,
+          rgba(150, 150, 150, 0.7) 50%,
+          rgba(17, 17, 17, 1) 100%
+  ) 80% 0 80% 0/3px 0 3px 0 stretch;
+  transition: color 0.5s;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  border-image: linear-gradient(
+          to left,
+          rgba(17, 17, 17, 1) 1%,
+          var(--light-red) 50%,
+          rgba(17, 17, 17, 1) 100%
+  ) 80% 0 80% 0/3px 0 3px 0 stretch;
+}
+
+/* BUTTONS STATES */
+.active {
+  color: var(--blue);
+}
+
+.active:hover {
+  color: var(--blue);
+  border-image: linear-gradient(
+          to left,
+          rgba(17, 17, 17, 1) 1%,
+          var(--blue) 50%,
+          rgba(17, 17, 17, 1) 100%
+  ) 80% 0 80% 0/3px 0 3px 0 stretch;
+  cursor: default;
+}
+
+/* QUOTE/HOME PAGE */
+.quote-container {
+  height: 50vh;
+  width: 75%;
+  margin: 2rem auto;
+  background-image: url("../assets/images/ancestor.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-display {
+  padding: 10px 25px;
+  font-family: DwarvenAxe, cursive;
+  color: var(--grey);
+  font-size: 3em;
+  text-shadow: 3px 3px 5px var(--light-red);
+  background: rgba(25, 25, 25, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  height: 20vh;
+  margin: 0 auto;
+  background-image: url("../assets/images/torch.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  margin: 0 auto;
+  color: var(--yellow);
+  font-family: Lato, monospace;
+  font-weight: bold;
+  cursor: default;
+  opacity: 0.7;
+  background: rgba(25, 25, 25, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* LINKS PAGE */
+.links-container {
+  width: 75%;
+  height: 50vh;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links-container .button {
+  margin: 2em;
+}
