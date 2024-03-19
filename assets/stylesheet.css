@@ -45,8 +45,7 @@ header {
 h1 {
   font-family: DwarvenAxe, cursive;
   color: var(--black);
-  font-size: 5em;
-  line-height: 1em;
+  font-size: 4rem;
   text-align: center;
   margin: 2rem;
   padding: 8px 20px;
@@ -62,6 +61,19 @@ h1 {
   cursor: default;
 }
 
+@media screen and (max-width: 650px) {
+  header {
+    width: 100%;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 .button-container {
   display: flex;
   justify-content: space-evenly;
@@ -69,7 +81,7 @@ h1 {
 
 .button {
   color: var(--yellow);
-  font-size: 2em;
+  font-size: 2rem;
   font-family: DwarvenAxe, cursive;
   background: none;
   padding: 8px 20px;
@@ -86,6 +98,9 @@ h1 {
   width: 50%;
   text-align: center;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
@@ -127,15 +142,28 @@ h1 {
   align-items: center;
 }
 
+@media screen and (max-width: 650px) {
+  .quote-container {
+    width: 100%;
+    height: 65vh;
+  }
+}
+
 .quote-display {
   padding: 10px 25px;
   font-family: DwarvenAxe, cursive;
   color: var(--grey);
-  font-size: 3em;
+  font-size: 3rem;
   text-shadow: 3px 3px 5px var(--light-red);
   background: rgba(25, 25, 25, 0.3);
   backdrop-filter: blur(10px);
   text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .quote-display {
+    font-size: 2rem;
+  }
 }
 
 /* FOOTER */
@@ -163,16 +191,34 @@ footer p {
   backdrop-filter: blur(10px);
 }
 
+@media screen and (max-width: 650px) {
+  footer {
+    display: none;
+  }
+}
+
 /* LINKS PAGE */
 .links-container {
   width: 75%;
   height: 50vh;
   margin: 2rem auto;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .links-container .button {
-  margin: 2em;
+  margin: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .links-container {
+    height: 65vh;
+  }
+
+  .links-container .button {
+    width: 100%;
+    margin: 1rem;
+  }
 }
